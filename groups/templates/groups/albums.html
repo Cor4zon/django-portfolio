@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>test albums</h1>
+    <div class="row">
+    {% for album in albums %}
+        <div class="col-md-4">
+            <img src="{% static album.cover %}" alt="error" width="300" height="300">
+            <div class="col-mb-2">
+
+            <h5>{{album.title}}</h5>
+            <p>{{album.artist}}</p>
+            <p>{{album.year}}</p>
+            <a href="{% url 'groups:albumInfo' album.pk %}" class="btn btn-primary">Read more</a>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
 {% endblock %}
