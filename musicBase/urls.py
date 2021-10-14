@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', views.index, name='home'),
     url('groups/', include('groups.urls')),
     url('users/', include('users.urls')),
+    url('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]

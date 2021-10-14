@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #my apps
     'groups',
     'users',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# AUTH
+LOGIN_REDIRECT_URL = 'groups/albums'
+# LOGOUT_REDIRECT_URL = 'groups/base'
