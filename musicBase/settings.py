@@ -57,14 +57,16 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'musicBase.urls'
 
 USERS_TEMPLATE_DIR = os.path.join(BASE_DIR, 'users/templates')
-GROUPS_TAMPLATE_DIR = os.path.join(BASE_DIR, 'groups/templates')
+GROUPS_TEMPLATE_DIR = os.path.join(BASE_DIR, 'groups/templates')
+BLOG_TAMPLATE_DIR = os.path.join(BASE_DIR, 'blog/temlaptes')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             USERS_TEMPLATE_DIR,
-            GROUPS_TAMPLATE_DIR,
+            GROUPS_TEMPLATE_DIR,
+            BLOG_TAMPLATE_DIR
         ],
         'APP_DIRS': True,
         'OPTIONS': {
